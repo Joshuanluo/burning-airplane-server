@@ -17,38 +17,38 @@ u7 = User.create :name => 'Jil', :password => 'chicken', :admin => false
 puts "#{ User.count } users"
 
 Airplane.destroy_all
-a1 = Airplane.create :name => '747', :row => 4, :column => 24
-a2 = Airplane.create :name => '757', :row => 4, :column => 8
+a1 = Airplane.create :name => '747', :row => 24, :column => 4
+a2 = Airplane.create :name => '757', :row => 8, :column => 4
 puts "#{ Airplane.count } airplanes"
 
 Flight.destroy_all
 f1 = Flight.create :flight_no => 23, :origin => 'JFK', :destination => 'SFO', :date => 3/1/13
 f2 = Flight.create :flight_no => 87, :origin => 'JFK', :destination => 'LAX', :date => 3/3/13
-f3 = Flight.create :flight_no => 09, :origin => 'JFK', :destination => 'SFO', :date => 3/8/13
+f3 = Flight.create :flight_no => 9, :origin => 'JFK', :destination => 'SFO', :date => 3/8/13
 f4 = Flight.create :flight_no => 412, :origin => 'JFK', :destination => 'SFO', :date => 3/3/13
 puts "#{ Flight.count } flights"
 
 Reservation.destroy_all
-r1 = Reservation.create 
-r2 = Reservation.create 
-r3 = Reservation.create 
-r4 = Reservation.create 
-r5 = Reservation.create 
-r6 = Reservation.create 
-r7 = Reservation.create 
-r8 = Reservation.create 
-r9 = Reservation.create 
-r10 = Reservation.create 
-r11 = Reservation.create 
-r12 = Reservation.create 
-r13 = Reservation.create 
-r14 = Reservation.create 
-r15 = Reservation.create 
-r16 = Reservation.create 
-r17 = Reservation.create 
-r18 = Reservation.create 
-r19 = Reservation.create 
-r20 = Reservation.create 
+r1 = Reservation.create :seat_number => '22C' 
+r2 = Reservation.create :seat_number => '2C' 
+r3 = Reservation.create :seat_number => '22C' 
+r4 = Reservation.create :seat_number => '2C' 
+r5 = Reservation.create :seat_number => '21A' 
+r6 = Reservation.create :seat_number => '1A' 
+r7 = Reservation.create :seat_number => '21A' 
+r8 = Reservation.create :seat_number => '1A' 
+r9 = Reservation.create :seat_number => '22D'
+r10 = Reservation.create :seat_number => '2D'
+r11 = Reservation.create :seat_number => '22D'
+r12 = Reservation.create :seat_number => '2D'
+r13 = Reservation.create :seat_number => '22B'
+r14 = Reservation.create :seat_number => '2B'
+r15 = Reservation.create :seat_number => '22B'
+r16 = Reservation.create :seat_number => '2B'
+r17 = Reservation.create :seat_number => '23C'
+r18 = Reservation.create :seat_number => '3C'
+r19 = Reservation.create :seat_number => '23C'
+r20 = Reservation.create :seat_number => '3C'
 
 puts "#{ Reservation.count } reservations"
 
