@@ -3,13 +3,23 @@ class SessionController < ApplicationController
     end
 
     def create
+        puts "this is params",params
         user = User.find_by :email => params[:email]
         if user.present? && user.authenticate(params[:password])
             session[:user_id] = user.id
-            redirect_to root_path
+            # redirect_to root_path
+            render :json => {
+                "isSuccess":true,
+                "name":user.name,
+                "email":user.email,
+                "reservations":user.reservations
+            }
         else
             flash[:error] = "Invalid username or password"
-            redirect_to login_path # try again
+            render :json => {
+                "isSuccess":false,
+                'error': "Invalid username or password"
+            }# try again
         end
     end
 
