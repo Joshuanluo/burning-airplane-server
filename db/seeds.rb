@@ -22,10 +22,10 @@ a2 = Airplane.create :name => '757', :row => 8, :column => 4
 puts "#{ Airplane.count } airplanes"
 
 Flight.destroy_all
-f1 = Flight.create :flight_no => 23, :origin => 'JFK', :destination => 'SFO', :date => 3/1/13
-f2 = Flight.create :flight_no => 87, :origin => 'JFK', :destination => 'LAX', :date => 3/3/13
-f3 = Flight.create :flight_no => 9, :origin => 'JFK', :destination => 'SFO', :date => 3/8/13
-f4 = Flight.create :flight_no => 412, :origin => 'JFK', :destination => 'SFO', :date => 3/3/13
+f1 = Flight.create :flight_no => 23, :origin => 'JFK', :destination => 'SFO', :date => "2013-01-03"
+f2 = Flight.create :flight_no => 87, :origin => 'JFK', :destination => 'LAX', :date => "2013-03-03"
+f3 = Flight.create :flight_no => 9, :origin => 'JFK', :destination => 'SFO', :date => "2013-08-03"
+f4 = Flight.create :flight_no => 412, :origin => 'JFK', :destination => 'SFO', :date => "2013-03-03"
 puts "#{ Flight.count } flights"
 
 Reservation.destroy_all
