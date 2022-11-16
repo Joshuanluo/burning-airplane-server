@@ -7,13 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-u1 = User.create :name => 'Jack', :password => 'chicken', :admin => true
-u2 = User.create :name => 'Joshua', :password => 'chicken', :admin => true
-u3 = User.create :name => 'Tom', :password => 'chicken', :admin => false
-u4 = User.create :name => 'Sam', :password => 'chicken', :admin => false
-u5 = User.create :name => 'Tim', :password => 'chicken', :admin => false
-u6 = User.create :name => 'Sue', :password => 'chicken', :admin => false
-u7 = User.create :name => 'Jil', :password => 'chicken', :admin => false
+u1 = User.create :name => 'Jack', :password => 'chicken', :admin => true, :email => 'jack@ga.co'
+u2 = User.create :name => 'Joshua', :password => 'chicken', :admin => true, :email => 'joshua@ga.co'
+u3 = User.create :name => 'Tom', :password => 'chicken', :admin => false, :email => 'tom@ga.co'
+u4 = User.create :name => 'Sam', :password => 'chicken', :admin => false, :email => 'sam@ga.co'
+u5 = User.create :name => 'Tim', :password => 'chicken', :admin => false, :email => 'tim@ga.co'
+u6 = User.create :name => 'Sue', :password => 'chicken', :admin => false, :email => 'sue@ga.co'
+u7 = User.create :name => 'Jil', :password => 'chicken', :admin => false, :email => 'jil@ga.co'
 puts "#{ User.count } users"
 
 Airplane.destroy_all
