@@ -12,7 +12,8 @@ class SessionController < ApplicationController
                 "isSuccess":true,
                 "name":user.name,
                 "email":user.email,
-                "reservations":user.reservations
+                "reservations":user.reservations,
+                "id":user.id
             }
         else
             flash[:error] = "Invalid username or password"
